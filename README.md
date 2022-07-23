@@ -1,4 +1,4 @@
-#微信小程序练习
+# 微信小程序练习
 # 页面布局
 
 共使用了两个page，一个index，一个login，分别作为tabBar的两个页面。
@@ -15,6 +15,11 @@
 ![index页面](images/4.jpg)
 ---------
 图片3
+
+
+![index页面](images/7.jpg)
+---------
+图片4
 
 ## login页面
 ![login页面](images/3.jpg)
