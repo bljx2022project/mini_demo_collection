@@ -1,0 +1,9 @@
+/* pages/login/login.wxss */
+.registerBtn {
+  width: 80%;
+  margin-top: 20rpx;
+  background-color: beige;
+  color: white;
+  border-radius: 98rpx; 
+  color: rgb(129, 119, 30);
+}
