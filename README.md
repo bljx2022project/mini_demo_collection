@@ -3,11 +3,11 @@
 
 共使用了两个page，一个index，一个login，分别作为tabBar的两个页面。
 ## index页面
-![index页面](images/1.jpg)
+![index页面](images/5.jpg)
 ---------
 图片1
 
-![index页面](images/2.jpg)
+![index页面](images/6.jpg)
 ---------
 图片2
 
