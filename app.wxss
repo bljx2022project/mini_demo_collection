@@ -19,3 +19,8 @@
   background-color: beige;
   color: rgb(12, 95, 95);
 }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

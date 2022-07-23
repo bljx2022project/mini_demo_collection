@@ -4,10 +4,22 @@
 共使用了两个page，一个index，一个login，分别作为tabBar的两个页面。
 ## index页面
 ![index页面](images/1.jpg)
+---------
+图片1
+
 ![index页面](images/2.jpg)
+---------
+图片2
+
+
+![index页面](images/4.jpg)
+---------
+图片3
 
 ## login页面
 ![login页面](images/3.jpg)
+---------
+图片4
 
 # vant组件的使用
 ## index页面
@@ -16,10 +28,12 @@
     "van-notice-bar": "@vant/weapp/notice-bar/index",
     "van-count-down": "@vant/weapp/count-down/index",
     "van-button": "@vant/weapp/button/index",
-    "van-progress": "@vant/weapp/progress/index"
+    "van-progress": "@vant/weapp/progress/index",
+      "van-collapse": "@vant/weapp/collapse/index",
+  "van-collapse-item": "@vant/weapp/collapse-item/index"
   }
   ```
-  即使用了通知栏，计时器，按钮，进度条
+  即使用了通知栏，计时器，按钮，进度条,折叠面板
 
   倒计时部分代码
   ```
@@ -95,7 +109,14 @@ this.setData({array:[4,5,6,7,8]})
 <view wx:elif="{{user == 'VIP'}}"> VIP </view>
 
 列表渲染-
-<block wx:for="{{array}}"> {{item}} </block>
+<!--列表渲染-->
+<p class="center">数组</p>
+
+<view style="text-align: center;">
+<block wx:for="{{array}}"> 
+    <p style="color: rgb(0, 183, 255);"> {{item}} </p>
+</block>
+</view>
 <button bindtap="change" class="CommonBtn">修改</button>
 
 模板
@@ -111,11 +132,13 @@ this.setData({array:[4,5,6,7,8]})
 
 模板加条件渲染，动态渲染
 <template name="func1">
-  <block> func1 </block>
+  <block> 用户1 </block>
 </template>
 <template name="func2">
-  <block> func2 </block>
+  <block> 用户2 </block>
 </template>
+
+<p>使用记录：</p>
 <block wx:for="{{[1, 2, 3, 4, 5]}}">
   <template is="{{item % 2 == 0 ? 'func1' : 'func2'}}"/>
 </block>

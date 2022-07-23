@@ -8,8 +8,10 @@ Page({
     User1: {Username: 'Hulk', Sex: 'F'},
     User2: {Username: 'Shang', Sex: 'M'},
     User3: {Username: 'Gideon', Sex: 'F'},
-    progressVal:0
+    progressVal:0,
+    activeNames: ['1'],
   },
+  
   change:function(){
 this.setData({array:[4,5,6,7,8]})
   },
@@ -30,6 +32,11 @@ this.setData({array:[4,5,6,7,8]})
   onChange(e) {
     this.setData({
       timeData: e.detail,
+    });
+  },
+  onChange1(event) {
+    this.setData({
+      activeNames: event.detail,
     });
   },
 })

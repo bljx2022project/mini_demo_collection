@@ -8,21 +8,12 @@
  <p class="welcome">欢迎{{user}}来到我们社区</p>
 </view><!--view非常占用空间-->
 <!--条件渲染-->
-<view wx:if="{{user == '新用户'}}"> 新用户 </view>
-<view wx:elif="{{user == 'VIP'}}"> VIP </view>
+
+<view class="center" wx:if="{{user == '新用户'}}"> 当前用户:新用户 </view>
+<view class="center" wx:elif="{{user == 'VIP'}}"> 当前用户:VIP </view>
 
 <button bindtap="levelUp" class="CommonBtn">LevelUp</button>
-<!--倒计时-->
-<p>倒计时</p>
-<van-count-down use-slot time="{{ time }}" bind:change="onChange">
-  <text class="item">{{ timeData.hours }}</text>
-  <text class="item">{{ timeData.minutes }}</text>
-  <text class="item">{{ timeData.seconds }}</text>
-</van-count-down>
-<!--列表渲染-->
-<p>数组</p>
-<block wx:for="{{array}}"> {{item}} </block>
-<button bindtap="change" class="CommonBtn">修改</button>
+
 
 <!--模板-->
 <template name="printDetails">
@@ -31,18 +22,27 @@
   </view>
 </template>
 
-<template is="printDetails" data="{{...User1}}"></template>
-<template is="printDetails" data="{{...User2}}"></template>
-<template is="printDetails" data="{{...User3}}"></template>
+<van-collapse accordion value="{{ activeNames }}" bind:change="onChange1">
+  <van-collapse-item title="用户1" name="1">
+    <template is="printDetails" data="{{...User1}}"></template>
+  </van-collapse-item>
+  <van-collapse-item title="用户2" name="2">
+    <template is="printDetails" data="{{...User2}}"></template>
+  </van-collapse-item>
+  <van-collapse-item title="用户3" name="3">
+    <template is="printDetails" data="{{...User3}}"></template>
+  </van-collapse-item>
+</van-collapse>
 
 <!--模板加条件渲染，动态渲染-->
 <template name="func1">
-  <block> func1 </block>
+  <block> 用户1 </block>
 </template>
 <template name="func2">
-  <block> func2 </block>
+  <block> 用户2 </block>
 </template>
 
+<p>使用记录：</p>
 <block wx:for="{{[1, 2, 3, 4, 5]}}">
   <template is="{{item % 2 == 0 ? 'func1' : 'func2'}}"/>
 </block>
@@ -52,4 +52,20 @@
   color="linear-gradient(to right, #be99ff, #7232dd)"/>
 <button bindtap="load" class="CommonBtn">Load</button>
 
+<!--倒计时-->
+<p class="center">倒计时</p>
+<van-count-down class="center" use-slot time="{{ time }}" bind:change="onChange">
+  <text class="item">{{ timeData.hours }}</text>
+  <text class="item">{{ timeData.minutes }}</text>
+  <text class="item">{{ timeData.seconds }}</text>
+</van-count-down>
+<!--列表渲染-->
+<p class="center">数组</p>
 
+<view style="text-align: center;">
+<block wx:for="{{array}}"> 
+    <p style="color: rgb(0, 183, 255);"> {{item}} </p>
+</block>
+</view>
+
+<button bindtap="change" class="CommonBtn">修改</button>
