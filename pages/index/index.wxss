@@ -1,0 +1,20 @@
+/**index.wxss**/
+.text1{
+  font-size: 100rpx;
+  color: blue;
+}
+.text2{
+  margin: 50rpx;
+}
+.text3{
+  margin: 20rpx;
+}
+/* .text4{
+  margin: 20rpx;
+  border:2rpx solid rgb(78, 94, 230);
+  background-color: rgb(78, 94, 230);
+  color: white;
+}
+.text4 button{
+  margin: 20rpx;
+} */

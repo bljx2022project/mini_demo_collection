@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+<p class="text1"> {{text1}}</p>
+
+</view>
+<button bindtap="changeData">点击切换</button>
+
+
+<view class="text3">
+  <van-search
+  value="{{ value }}"
+  shape="round"
+  background="rgb(198, 201, 243)"
+  placeholder="请输入搜索关键词"
+/>
+
+
+</view>
+
+<view class="text5">
+  <van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+  <van-collapse-item title="标题1" name="1">
+    内容1
+  </van-collapse-item>
+  <van-collapse-item title="标题2" name="2">
+    内容2
+  </van-collapse-item>
+  <van-collapse-item title="标题3" name="3">
+    内容3
+  </van-collapse-item>
+</van-collapse>
+
+</view>
+
+
+<!-- <view class="text2">
+  <van-slider value="50" bind:change="onChange" />
+</view> -->
+
+
+
+
+

@@ -1,0 +1,68 @@
+<!--pages/index2/index2.wxml-->
+<view >
+  <van-icon name="smile-o" class="part1" size="40px"/>
+  <text class="text2" >Exercise</text>
+</view>
+
+<view class="text4">
+  <view>条件渲染：</view>
+<view wx:if="{{type==1}}">奇数</view>
+<view wx:elif="{{type==2}}">偶数</view>
+<view wx:else>输入错误</view>
+</view>
+
+<view class="text5">
+  <view>模板：</view>
+<template name="staffName">
+  <view>
+    Name: {{firstName}}, Hobby: {{hobby}}
+  </view>
+</template>
+
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+</view>
+
+<view class="text6">
+  <view >列表渲染：</view>
+<view wx:for="{{array}}" style="text-align: center;">内容{{item}}</view>
+
+<button bindtap="changeNum">
+点击切换数字
+</button>
+</view>
+
+<!-- <view class="text7">
+  <van-collapse accordion value="{{ activeName }}" bind:change="onChange">
+  <van-collapse-item title="标题1" name="1">
+    内容1
+  </van-collapse-item>
+  <van-collapse-item title="标题2" name="2">
+    内容2
+  </van-collapse-item>
+  <van-collapse-item title="标题3" name="3">
+    内容3
+  </van-collapse-item>
+</van-collapse>
+
+</view> -->
+
+<view class="text3">
+<p>请上传图片：</p>
+  <van-uploader file-list="{{ fileList }}" />
+
+</view>
+
+<view class="text7" style="text-align: center;">
+<p>请评分：</p>
+  <van-rate
+  value="{{ value }}"
+  size="{{ 25 }}"
+  color="#ffd21e"
+  void-icon="star"
+  void-color="#eee"
+  bind:change="onChange"
+/>
+</view>
+
