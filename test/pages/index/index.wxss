@@ -1,0 +1,30 @@
+/**index.wxss**/
+
+#header{
+  text-align: center;
+  padding-top: 5%;
+  font-family: 幼圆;
+}
+
+#list{
+  text-align: center;
+  padding-bottom: 15%;
+  font-family: 幼圆;
+}
+
+#image-1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5%;
+}
+
+.under{
+  overflow: hidden;
+  margin-bottom: 0;
+  bottom:0px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
