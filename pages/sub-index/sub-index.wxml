@@ -1,0 +1,21 @@
+<!--pages/service/aboutme/aboutme.wxml-->
+
+<view class="container">
+    <view wx:if="{{userInfo}}">
+        <text>
+            {{userInfo.nickName}}
+        </text>
+
+        <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+
+        <button bindtap="logout">
+            退出登录
+        </button>
+    </view>
+
+    <view wx:else>
+        <button bindtap="login">
+            登录
+        </button>
+    </view>
+</view>

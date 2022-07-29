@@ -1,3 +1,10 @@
 <!--pages/index/index.wxml-->
 
-<text>模板 + 条件渲染就差不多 尽量尝试一些新鲜的东西</text>
+
+
+<block wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </block>
+<button bindtap="switch"> Shuffle </button>
+<button bindtap="addToFront"> Add to the front </button>
+
+
+<navigator class="btm-btn" url="../sub-index/sub-index" style="position: relative; left: 196rpx; top: 814rpx; width: 302rpx; height: 92rpx; display: block; box-sizing: border-box"> login </navigator>
