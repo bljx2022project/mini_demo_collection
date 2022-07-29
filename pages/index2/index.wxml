@@ -1,0 +1,55 @@
+<!--pages/index2/index.wxml-->
+<text style="font-size: 100rpx; color: rgb(0, 99, 66);">这是页面2</text>
+
+<van-divider
+  contentPosition="center"
+  fontSize="20" textColor="#1989fa"
+>
+    Progress 进度条
+</van-divider>
+
+<!-- Progress 进度条 -->
+<van-progress style="margin-top:100rpx;" percentage="{{per}}" />
+<button style="margin-top:50rpx;" bindtap="upup">
+点击+10
+</button>
+
+
+<van-divider
+  contentPosition="center"
+  fontSize="20" textColor="#1989fa"
+>
+    DropdownMenu 下拉菜单
+</van-divider>
+<!-- DropdownMenu 下拉菜单 -->
+<van-dropdown-menu style="margin-top:50rpx">
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+  <van-dropdown-item value="{{ value2 }}" options="{{ option2 }}" />
+</van-dropdown-menu>
+
+<van-divider
+  contentPosition="center"
+  fontSize="20" textColor="#1989fa"
+>
+    Rate 评分   
+</van-divider>
+<!-- Rate 评分 -->
+<van-rate
+  value="{{ value }}"
+  icon="like"
+  void-icon="like-o"
+  bind:change="onChange"
+/>
+
+<van-divider
+  contentPosition="center"
+  fontSize="20" textColor="#1989fa"
+>
+CountDown 倒计时
+</van-divider>
+<!-- CountDown 倒计时 -->
+<van-count-down use-slot time="{{ time }}" bind:change="onChange">
+  <text class="item">{{ timeData.hours }}</text>
+  <text class="item">{{ timeData.minutes }}</text>
+  <text class="item">{{ timeData.seconds }}</text>
+</van-count-down>

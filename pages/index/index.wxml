@@ -1,0 +1,43 @@
+<!--index.wxml-->
+<view class="container">
+  <p class="text1">{{text1}}</p>
+</view>
+
+<!-- web:onclick  -- bindtap  绑定触摸
+<button bindtap="changeData">
+点击切换文字内容
+</button> -->
+
+<!--wxml --  列表渲染  -->
+<view wx:for="{{array}}"> {{item}} </view>
+
+<!-- web:onclick  -- bindtap  绑定触摸1-->
+<button bindtap="changeNum">
+点击切换列表第三个数字
+</button>
+
+<view wx:if="{{answer == 'YES'}}"> YES </view>
+<view wx:elif="{{answer == 'NO'}}"> NO </view>
+<!-- bindtap  绑定触摸2-->
+<button bindtap="changeAnswer">
+点击切换答案
+</button>
+
+<!--wxml--  模板-->
+<!-- name定义模板名字，template内书写模板 -->
+<template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+<!-- 模板引用：使用is属性，声明需要使用的模板；使用data属性，传入数据，格式为data="{{...数据名字}}" -->
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+
+<!-- CountDown 倒计时 -->
+<van-count-down use-slot time="{{ time }}" bind:change="onChange">
+  <text class="item">{{ timeData.hours }}</text>
+  <text class="item">{{ timeData.minutes }}</text>
+  <text class="item">{{ timeData.seconds }}</text>
+</van-count-down>
