@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<van-search value="{{ value0 }}" placeholder="请输入搜索关键词" />
+<view class="choice">
+    <view wx:if="{{view == 'WEBVIEW'}}"> 我爱信息 </view>
+    <view wx:elif="{{view == 'APP'}}"> 我爱北京 </view>
+    <view wx:else="{{view == 'MINA'}}"> 我爱北林 </view>
+</view>
+<view class="container">
+  <p class="text1">{{text1}}</p>
+</view>
+<view class="button">
+<van-button bindtap="changeData" round type="info">点击切换</van-button>
+</view>
+<view wx:for="{{array}}">{{item}}
+</view>
+<view class="button">
+<van-button bindtap="changeNum" plain type="primary">点击倒序</van-button>
+</view>
+<p>经典地标：</p>
+<template name="address">
+<view>
+    name: {{name}}, reason: {{reason}}
+</view>
+</template>
+<template is="address" data="{{...part1}}"></template>
+<template is="address" data="{{...part2}}"></template>
+<template is="address" data="{{...part3}}"></template>
+<p>评分：</p>
+<van-rate value="{{ value }}" bind:change="onChange" />
+<van-nav-bar
+    left-text="返回"
+    right-text="按钮"
+    left-arrow
+    bind:click-left="onClickLeft"
+    bind:click-right="onClickRight"/>
+
+
+
+
+
+
+
+
+
