@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <p class="text1">{{text1}}</p>
+  <van-button bindtap="changeData"  class="b1" icon="https://img.yzcdn.cn/vant/logo.png" type="info">
+    点击切换标题
+  </van-button>
+<view class="t1">
+  <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+  <view wx:elif="{{view == 'APP'}}"> APP </view>
+  <view wx:else="{{view == 'MINA'}}"> 道法自然 </view>
+</view>
+  <van-cell-group>
+  <van-field
+    value="{{ username }}"
+    required
+    clearable
+    label="用户名"
+    icon="question-o"
+    placeholder="请输入用户名"
+    bind:click-icon="onClickIcon"
+  />
+  <van-field
+    value="{{ password }}"
+    type="password"
+    label="密码"
+    placeholder="请输入密码"
+    required
+    border="{{ false }}"
+  />
+</van-cell-group>
+
+<view wx:for="{{array}}" > 
+{{item}} 
+</view>
+<van-button bindtap="changelist"  class="b2" icon="https://img.yzcdn.cn/vant/logo.png" type="info">
+    点击切换列表内容
+  </van-button>
+</view>
+
+<view class="t2">
+  <template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+</view>
+
+<van-cell-group>
+  <van-field
+    value="{{ sms }}"
+    center
+    clearable
+    label="短信验证码"
+    placeholder="请输入短信验证码"
+    border="{{ false }}"
+    use-button-slot
+  >
+    <van-button slot="button" size="small" type="primary">
+      发送验证码
+    </van-button>
+  </van-field>
+</van-cell-group>
+

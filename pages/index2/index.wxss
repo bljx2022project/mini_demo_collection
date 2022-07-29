@@ -1,0 +1,20 @@
+/* pages/index2/index.wxss */
+.container{
+  background-color: rgb(237, 243, 180);
+  height: auto;
+}
+.text2{
+    font-size: 50rpx;
+    font-style:italic;
+    top: -120rpx;
+    margin-bottom: 5rpx;
+    color: rgb(207, 204, 16);
+    height: 60px;
+    position: relative;
+}
+.t1{
+  top:100rpx;
+  position: relative;
+  background-color: rgb(237, 243, 180);
+  height: 400rpx;
+}

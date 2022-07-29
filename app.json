@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/index2/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#A0EEE1",
+    "navigationBarTitleText": "知行合一",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#A0EEE1",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "pages/image/尊贵身份.png",
+      "selectedIconPath": "pages/image/尊贵身份.png",
+      "Color": "#A0EEE1"
+    },
+    {
+      "pagePath": "pages/index2/index",
+      "text": "遇见自己",
+      "iconPath": "pages/image/客服.png",
+      "selectedIconPath": "pages/image/客服.png",
+      "color": "#A0EEE1"
+    }
+   ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

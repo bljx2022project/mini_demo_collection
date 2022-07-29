@@ -1,0 +1,41 @@
+/**index.wxss**/
+.container{
+  background-color: rgb(237, 243, 180);
+}
+.text1{
+    font-size: 60rpx;
+    font-style: oblique;
+    top: -120rpx;
+    margin-bottom: 5rpx;
+    color: rgb(207, 204, 16);
+    height: 100px;
+    position: relative;
+}
+.text2{
+  display: flex;
+}
+.t1{
+  top: -40rpx;
+  position: relative;
+  color: rgb(23, 206, 54);
+}
+.b1{
+  font-size: 20rpx;
+  top: -200rpx;
+  position: relative;
+  height: 10rpx;
+}
+.b2{
+  font-size: 30rpx;
+  margin-top: 5rpx;
+  background-color: rgb(237, 243, 180);
+}
+.t2{
+  font-size: 40rpx;
+  width: auto;
+  display: flex;
+  align-items: center;
+  background-color: rgb(237, 243, 180);
+  top: -50rpx;
+  position: relative;
+}

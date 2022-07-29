@@ -1,0 +1,28 @@
+<!--pages/index2/index.wxml-->
+<view class="container">
+  <p class="text2">{{text2}}</p>
+  <van-search
+  value="{{ value }}"
+  label="地址"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+
+<van-circle class="t1" value="{{ 88 }}" size="130" stroke-width="8" text="进度"
+ />
+
+ <van-share-sheet
+  show="{{ showShare }}"
+  options="{{ options }}"
+  title="立即分享给好友"
+  description="描述信息"
+/>
+
+</view>
+
