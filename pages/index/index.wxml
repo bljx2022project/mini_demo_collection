@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<van-notice-bar scrollable
+  left-icon="volume-o"
+  text="------计协天下无敌----计协天下无敌----计协天下无敌----"
+/>
+
+<view class="container">
+  <p class="text1">{{text1}}</p>
+</view>
+
+<van-button round bindclick="changeData" color="linear-gradient(to right, #4bb0ff, #6149f6)">
+多点几次试试
+</van-button>
+
+
+<view wx:for="{{array}}">
+{{item}}
+</view>
+
+<van-button bindclick="changeNum" color="linear-gradient(to right, #4bb0ff, #6149f6)">
+倒序
+</van-button>
+
+<!--wxml-->
+<view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+<view wx:elif="{{view == 'APP'}}"> APP </view>
+<view wx:else="{{view == 'MINA'}}"> bingo </view>
+
+<!--wxml-->
+<template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>

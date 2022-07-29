@@ -1,0 +1,17 @@
+<!--pages/index2/index.wxml-->
+<van-notice-bar scrollable
+  left-icon="volume-o"
+  text="------天上来敌----天上来敌----天上来敌----"
+/>
+<view class="container">
+  <p class="tap">页面2</p>
+</view>
+<van-circle value="{{ pre }}" text="{{pre}}" />
+<van-button round bindclick="changePre" color="linear-gradient(to right, #4bb0ff, #6149f6)">
+试试看
+</van-button>
+
+
+
+
+

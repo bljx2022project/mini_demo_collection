@@ -1,0 +1,6 @@
+/* pages/index2/index.wxss */
+.tap{
+	font-size: 100rpx;
+	color: blue;
+	font-style: italic;
+}

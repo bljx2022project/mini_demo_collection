@@ -1,0 +1,28 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index2/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#8B0000",
+        "navigationBarTitleText": "WYL的微信小程序界面",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [{
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        },{
+            "pagePath": "pages/index2/index",
+            "text": "页面2"
+        }]
+    },
+    "usingComponents": {
+        "van-button": "@vant/weapp/button/index",
+        "van-toast": "@vant/weapp/toast/index",
+        "van-circle": "@vant/weapp/circle/index",
+        "van-notice-bar": "@vant/weapp/notice-bar/index"
+    },  
+    "sitemapLocation": "sitemap.json"
+}
