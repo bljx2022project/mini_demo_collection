@@ -1,0 +1,7 @@
+/**index.wxss**/
+.text1{
+    font-size: 100rpx;
+    color: aqua;
+    font-style: italic;
+}
+  
