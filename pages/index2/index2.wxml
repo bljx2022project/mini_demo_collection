@@ -1,0 +1,58 @@
+<!--pages/index2/index2.wxml-->
+<view class="container">
+    <p class="text2">{{text2}}</p>
+</view>
+<view style="margin-top: -130rpx; text-align: center;">
+    <van-button size="large" color="linear-gradient(to right, #000fff, #8A2BE2)" bindtap="changeData">
+        早安
+    </van-button>
+</view>
+
+
+<!-- 条件渲染 -->
+<view style="margin-top: 50rpx;">
+    <view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW 条件渲染 </view>
+    <view wx:elif="{{view == 'APP'}}"> APP </view>
+    <view wx:else="{{view == 'MINA'}}"> bingo </view>
+</view>
+
+
+<!-- 模板函数 -->
+<template name="staffName">
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+<view style="line-height: 66rpx; height: 200rpx; background-color: darkturquoise; text-align: center;margin-top: 30rpx;">
+    <template is="staffName" data="{{...staffA}}"></template>
+    <template is="staffName" data="{{...staffB}}"></template>
+    <template is="staffName" data="{{...staffC}}"></template>
+</view>
+
+
+<!-- 倒计时 -->
+<view style="margin-top: 40rpx;">
+    <van-count-down use-slot time="{{ time }}" bind:change="onChange">
+    <text class="item">{{ timeData.hours }}</text>
+    <text class="item">{{ timeData.minutes }}</text>
+    <text class="item">{{ timeData.seconds }}</text>
+    </van-count-down>
+</view>
+
+<view style="margin-top: 60rpx;">
+    <!-- 环形进度条 -->
+    <van-circle value="{{ value }}" size="120" color="{{ gradientColor }}" stroke-width="6" text="piu酿" />
+    <!-- 按钮 -->
+    <view style="margin-top: -170rpx;margin-left: 280rpx;">
+        <van-button round type="info" style="margin-left: -20rpx;" bindtap="onADD">点击+10%</van-button>
+        <van-button round type="info" style="margin-left: 20rpx;" bindtap="onMINUS">点击-10%</van-button>
+    </view>
+</view>
+
+<view style="margin-top: 130rpx; box-shadow: rgb(86, 95, 224) 10rpx 10rpx 30rpx 10rpx;">
+    <van-cell-group inset>
+        <van-cell title="换着玩 暂时没啥用">
+            <van-switch checked="{{ checked }}" active-color="#BA55D3" inactive-color="#7FFFD4" bind:change="oncchange" />
+        </van-cell>
+    </van-cell-group>
+</view>

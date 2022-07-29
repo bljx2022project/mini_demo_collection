@@ -1,0 +1,31 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/index2/index2"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#DAA520",
+        "navigationBarTitleText": "OYOYY",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+            "pagePath": "pages/index/index",
+            "text": "首页"
+        },{
+            "pagePath": "pages/index2/index2",
+            "text": "次页"
+        }]
+    },
+    "usingComponents": {
+        "van-count-down": "@vant/weapp/count-down/index",
+        "van-circle": "@vant/weapp/circle/index",
+        "van-button": "@vant/weapp/button/index",
+        "van-switch": "@vant/weapp/switch/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index"
+      },
+    "sitemapLocation": "sitemap.json"
+}

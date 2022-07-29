@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+    <p class="text1">{{text1}}</p>
+</view>
+
+<view style="background-color: rgb(238, 175, 93); font-size: 40rpx; text-align: center;"><p>列表渲染</p></view>
+
+
+<view style="text-align: center;" wx:for="{{array_for}}">
+    {{item}}
+</view>
+
+<view style="text-align: center;">
+    <van-button plain type="primary" style="margin-left: -10rpx;" bindtap="change_arrayNum"> 三变叭叭 </van-button>
+    <van-button plain type="primary" style="margin-left: 50rpx;" bindtap="change_arrayNum2"> 叭叭回三 </van-button>
+</view>
+
+<view style="margin-top: 60rpx; box-shadow: cornflowerblue 10rpx 10rpx 10rpx 10rpx;">
+    <van-notice-bar speed="100" background="#ecf9ff" scrollable left-icon="volume-o" text="博主真的很帅很帅的"/>
+</view>
+
