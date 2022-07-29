@@ -1,0 +1,18 @@
+/**index.wxss**/
+.text1{
+    font-size: 100rpx;
+    color: blue;
+    font-style: italic;
+}
+.button{
+    text-align: center;
+}
+.choice{
+    font-size: 50rpx;
+    color: darkolivegreen;
+    text-align: center;
+}
+p{
+    font-size: 40rpx;
+    color: darksalmon;
+}
