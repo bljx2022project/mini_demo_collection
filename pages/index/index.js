@@ -9,7 +9,11 @@ Page({
         {id: 2, unique: 'unique_2'},
         {id: 1, unique: 'unique_1'},
         {id: 0, unique: 'unique_0'},
-      ]
+      ],
+      
+      //calender
+      date: '',
+      show: false,
     },
     switch: function(e) {
       const length = this.data.objectArray.length
@@ -34,4 +38,21 @@ Page({
       // Toast.success('Success!');
     }, 
 
+    //calendar
+    onDisplay() {
+      this.setData({ show: true });
+    },
+    onClose() {
+      this.setData({ show: false });
+    },
+    formatDate(date) {
+      date = new Date(date);
+      return `${date.getMonth() + 1}/${date.getDate()}`;
+    },
+    onConfirm(event) {
+      this.setData({
+        show: false,
+        date: this.formatDate(event.detail),
+      });
+    },
   })

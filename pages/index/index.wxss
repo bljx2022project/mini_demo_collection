@@ -2,4 +2,14 @@
 
 .btm-btn {
     position: relative;
+    left: 511rpx;
+    top: 629rpx;
+    width: 278rpx;
+    height: 92rpx;
+    display: block;
+    box-sizing: border-box;
+}
+
+.cld {
+    position: relative;
 }

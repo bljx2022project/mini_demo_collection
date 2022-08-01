@@ -1,10 +1,24 @@
 <!--pages/index/index.wxml-->
 
-
-
 <block wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> {{item.id}} </block>
-<button bindtap="switch"> Shuffle </button>
-<button bindtap="addToFront"> Add to the front </button>
+<view></view>
+<van-button color="#7232dd" bindtap="switch"> Shuffle </van-button>
+<van-button size="large" bindtap="addToFront"> Add to the front </van-button>
 
 
-<navigator class="btm-btn" url="../sub-index/sub-index" style="position: relative; left: 196rpx; top: 814rpx; width: 302rpx; height: 92rpx; display: block; box-sizing: border-box"> login </navigator>
+<template name="element">
+  <van-button class="ele" color="#703fd1"> {{id}} </van-button>
+</template>
+
+<block wx:for="{{objectArray}}" wx:key="unique" style="display: block;"> 
+  <template is="element" data="{{...item.id}}"></template>  
+</block>
+
+<div class="cld">
+  <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+</div>
+
+
+    <navigator url="../sub-index/sub-index" > login </navigator>
+
